@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <title>SFP</title>
+      <!-- Bootstrap core CSS -->
+      <link rel="stylesheet" href="//stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" crossorigin="anonymous">
+      <!-- Custom styles for this template -->
+      <link href="style.css" rel="stylesheet">
+      <script src="https://www.gstatic.com/firebasejs/5.7.0/firebase.js"></script>
+      <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   </head>
+   <body>
+      <!-- Navigation -->
+      <div class="d-flex flex-column flex-md-row align-items-center bg-navbar_ fixed-top">
+         <h5 class="my-2 mx-3 mr-md-auto font-weight-normal">
+            <a href="home.html"><img class="img-fluid logo-img" src="img/logo.png" alt="logo" /></a>
+         </h5>
+         <nav class="mx-3">
+            <!-- <input class="date-pick"  type="date" name="fasfsdfsd"> -->
+            <a class="p-2 text-link" href="home.html">
+            Accueil
+            </a>
+            <div class="btn-group">
+             <a id="p-2" class="p-2 text-link active dropdown-toggle nounderline" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Mes activites</a>
+           <div class="dropdown-menu dropdown-menu-center"  id="dropdown">
+             <a href="activites_$trwdws.html"><button  class="dropdown-item" type="button">Mes activites</button></a>
+             <a href="matchs.html"><button class="dropdown-item" type="button">SFP CUP</button></a>
+           </div>
+          </div>
+            <a class="p-2 text-link" href="inscription.html">
+            Inscriptions
+            </a>
+            <a class="p-2 text-link" href="sujection.html">
+            Suggestions
+            </a>
+            <a class="p-2 text-link" href="blog.html">
+            Blog
+            </a>
+            <a class="p-2 text-link" href="lamediatheque.html">
+            Mediathèque
+            </a>
+            <a class="p-2 text-link" href="newsletter.html">
+            Newsletter
+            </a>
+            <div class="btn-group">
+              <a id="p-2" class="p-2 text-link active dropdown-toggle remove nounderline" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-bars fa-lg"></i></a>
+            <div class="dropdown-menu dropdown-menu-center" id="dropdown">
+              <a href="https://sfpcommunity.com"><button  class="dropdown-item" type="button">Mon espace</button></a>
+              <a href="https://sfpcommunity.com/logout.php"><button class="dropdown-item" type="button">Déconnexion</button></a>
+            </div>
+         </div>
+         </nav>
+      </div>
+      <br><br><br><br>
+      <!-- Page Content -->
+      <div class="container div-padding">
+         <div class="row style-padding">
+            <div class="col-md-6">
+              <!-- Image pour la Zumba -->
+               <img src="img/salsa.jpeg" class="img-fluid">
+            </div>
+            <div class="col-md-6">
+               <h2 class="text-activity1">Salsa</h2>
+               <p class="fancy-underline"></p>
+               <p class="text-activity2">Deux cours de Salsa tous les vendredis de 20h00 à 22h00 et dimanches de 17h00 à 19h00. Venez accompagner au besoin du partenaire de votre choix !</p>
+               <a href="https://sfpcommunity.com/register_activity.php"><button class="btn btn-primary btn-inscription" type="submit">Inscription</button></a>
+            </div>
+         </div>
+         <div class="row">
+            <div class="col-md-3 div--">
+               <span class="text-small"><img src="img/place.svg" class="img-heure img-fluid">Salle Le Berlin</span><br>
+                <span class="text-small"><img src="img/calendar.svg" class="img-heure img-fluid">  <span style="color:red;">05/07/19  </span>
+               <!-- <span class="text-small"><img src="img/calendar.svg" class="img-heure img-fluid"> 08/12/18 (Date de
+               lancement)</span> -->
+            </div>
+            <div class="col-md-3 div--">
+              <span class="text-small"><img src="img/heure.svg" class="img-heure img-fluid"><span style="color:red;"> 20h00 -22h00 </span>
+            </div>
+         </div>
+         <br></br>
+         <h2 class="text-activity1">Voir les autres activités</h2>
+         <br>
+         <div class="row style-padding">
+            <div class="col-md-4">
+               <img src="img/foot.jpg" class="img-fluid">
+               <h2 class="text-activity1">Football</h2>
+               <p class="text-activity2">Chaque filiale forme au moins deux équipes et dispose de créneaux définis par le Fonds pour s’entrainer, se rapprocher des responsables Rh et du référent Football de sa filiale.
+                  Réservé aux inscrits uniquement.
+               </p>
+               <p class="text-activity2"><img src="img/place.svg" class="img-heure img-fluid"> Cotonou </p>
+            </div>
+            <div class="col-md-4">
+               <img src="img/bool.jpg" class="img-fluid">
+               <h2 class="text-activity1">Pétanque</h2>
+               <p class="text-activity2">Le Fonds met à disposition des sets de pétanque,
+                  Les intéressés s’organisent avec le référent Pétanque ou leur responsable RH pour les modalités de pratique.
+               </p>
+               <p class="text-activity2"><img src="img/place.svg" class="img-heure img-fluid"> Cotonou </p>
+            </div>
+            <div class="col-md-4">
+               <img src="img/cine.jpg" class="img-fluid">
+               <h2 class="text-activity1">Cinéma</h2>
+               <p class="text-activity2">Billets donnant accès à des places privilégiées pour tout le personnel du groupe SFP.
+                  Achat des tickets auprès des responsables RH.
+               </p>
+               <p class="text-activity2"><img src="img/place.svg" class="img-heure img-fluid"> Cotonou </p>
+            </div>
+         </div>
+      </div>
+      <!-- Footer -->
+      <footer id="section3" class="footer">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-6">
+                  <p class="text3">Immeuble SDI</p>
+                  <p class="text3">PK7, Route de Porto Novo</p>
+                  <p class="text3">05 BP 9087 Cotonou, BENIN</p>
+               </div>
+               <div class="col-md-6">
+                  <p class="text3">Tél : +229 21 33 40 21</p>
+                  <p class="text3">Site : www.sfp-groupe.com/community</p>
+                  <p class="text3">Mail : community@sfp-groupe.com</p>
+                  <!-- <a href="cgu.html"><p class="text3">Conditions générales d’utilisation</p></a> -->
+               </div>
+            </div>
+         </div>
+      </footer>
+      <!-- Bootstrap core JavaScript -->
+      <!-- <script src="firebase.js"></script>
+      <script src="main.js"></script> -->
+      <script src="https://code.jquery.com/jquery-3.1.0.js"  crossorigin="anonymous"></script>
+      <script src="//cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" crossorigin="anonymous"></script>
+      <script src="//stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" crossorigin="anonymous"></script>
+      <script src="https://www.gstatic.com/firebasejs/5.10.0/firebase.js"></script>
+      <script>
+        // Initialize Firebase
+        var config = {
+          apiKey: "AIzaSyBrzN20y4R6u5cV7aObjeQn54s43Chn8YI",
+          authDomain: "newapp-9c8d4.firebaseapp.com",
+          databaseURL: "https://newapp-9c8d4.firebaseio.com",
+          projectId: "newapp-9c8d4",
+          storageBucket: "newapp-9c8d4.appspot.com",
+          messagingSenderId: "713500677291"
+        };
+        firebase.initializeApp(config);
+      </script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <script src="js/script.js"></script>
+   </body>
+</html>

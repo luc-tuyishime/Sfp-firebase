@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <link rel="shortcut icon" href="">
+    <meta name="author" content="">
+    <title>SFP</title>
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="//stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/css/bootstrap-datepicker.min.css">
+      <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   <script src="https://www.gstatic.com/firebasejs/5.7.0/firebase.js"></script>
+  </head>
+  <body>
+      <div class="d-flex flex-column flex-md-row align-items-center bg-navbar fixed-top">
+         <h5 class="my-2 mx-3 mr-md-auto font-weight-normal">
+            <a href="home.html"><img class="img-fluid logo-img" src="img/logo.png" alt="logo" /></a>
+         </h5>
+         <nav class="mx-3">
+            <!-- <input class="date-pick"  type="date" name="fasfsdfsd"> -->
+            <a class="p-2 text-link" href="home.html">
+            Accueil
+            </a>
+            <div class="btn-group">
+             <a id="p-2" class="p-2 text-link active dropdown-toggle nounderline" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Mes activites</a>
+           <div class="dropdown-menu dropdown-menu-center"  id="dropdown">
+             <a href="activites_$trwdws.html"><button  class="dropdown-item" type="button">Mes activites</button></a>
+             <a href="matchs.html"><button class="dropdown-item" type="button">SFP CUP</button></a>
+           </div>
+          </div>
+            <a class="p-2 text-link" href="inscription.html">
+            Inscriptions
+            </a>
+            <a class="p-2 text-link" href="sujection.html">
+            Suggestions
+            </a>
+            <a class="p-2 text-link" href="blog.html">
+            Blog
+            </a>
+            <a class="p-2 text-link" href="lamediatheque.html">
+            Mediathèque
+            </a>
+            <a class="p-2 text-link" href="newsletter.html">
+            Newsletter
+            </a>
+            <div class="btn-group">
+          <a id="p-2" class="p-2 text-link active dropdown-toggle remove nounderline" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-bars fa-lg"></i></a>
+        <div class="dropdown-menu dropdown-menu-center" id="dropdown">
+          <a href="https://sfpcommunity.com"><button  class="dropdown-item" type="button">Mon espace</button></a>
+          <a href="https://sfpcommunity.com/logout.php"><button class="dropdown-item" type="button">Déconnexion</button></a>
+        </div>
+         </div>
+         </nav>
+      </div>
+      <div id="section1" class="jumbotron jumbo1 jumbotron-fluid horizontal">
+         <div class="container jumbo-container">
+            <div class="row h-100">
+               <div class="col-sm-12 my-auto">
+                  <div class="subtitle-content">
+                     <div class="col-md-7">
+                        <h1 class="text-slide home-padding">Fonds de developpement personnel des entreprises SFP</h1>
+                        <p class="home-subtitle">
+                        </p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div id="startchange"  class="container-fluid">
+         <div class="container jumbo-container">
+            <div class="row h-100">
+               <div class="col-sm-12 my-auto">
+                  <div class="subtitle-content text-div1">
+                     <div class="col-md-6">
+                        <h1 class="home-titleDiv1 home-padding">Quel est l’objet du Fonds ?</h1>
+                        <p class="home-subtitleDiv1">
+                           Le fonds de développement personnel des entreprises SFP accompagne les collaborateurs des filiales du groupe dans l’accomplissement des projets de développement personnel et l’accès à des activités sociales et culturelles tendant à leur épanouissement et à l'amélioration de leur bien-être.
+                        </p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="jumbo03">
+         <div class="container jumbo-container">
+            <div class="row h-100">
+               <div class="col-sm-12 my-auto">
+                  <div class="subtitle-content">
+                     <div class="col-md-8">
+                        <div class="row">
+                           <div class="col-sm-6">
+                              <h1 class="text-slide home-padding_">Quels sont les bénéficiaires du Fonds ?</h1>
+                           </div>
+                        </div>
+                        <p class="home-subtitle_">
+                           Sont éligibles à l’intervention du Fonds, les employés de toutes les filiales du groupe titulaires d’un CDI (contrat à durée indéterminée) ou d’un CDD (contrat à durée déterminée).
+                           A noter que pour bénéficier de certaines activités, il sera tenu compte du critère d’ancienneté dans le groupe.
+                           De même, les conjoints et enfants pourraient être exceptionnellement associés aux activités d’excursions.
+                        </p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="jumbo04">
+         <div id="section2" class="container jumbo-container">
+            <div class="row h-100">
+               <div class="col-sm-12 my-auto">
+                  <div class="subtitle-content">
+                     <div class="col-md-6">
+                        <div class="row">
+                           <div class="col-sm-6">
+                              <h1 class="text-slide home-padding_">Activités culturelles</h1>
+                           </div>
+                        </div>
+                        <p class="home-subtitle_">
+                           Le fonds met en place des partenariats avec des bibliothèques et librairies, des salles de spectacle et de cinéma pour vous offrir des activités culturelles diverses et variées.
+                        </p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="jumbo05">
+         <div class="container jumbo-container">
+            <div class="row h-100">
+               <div class="col-sm-12 my-auto">
+                  <div class="subtitle-content">
+                     <div class="col-md-6">
+                        <div class="row">
+                           <div class="col-sm-6">
+                              <h1 class="text-slide home-padding_">Ateliers artistiques</h1>
+                           </div>
+                        </div>
+                        <p class="home-subtitle_">
+                           Des ateliers de peinture, de théâtre des cours de photos, cours de danse ou encore cours de musique vous seront proposés pour stimuler votre fibre artistique en dehors du travail.
+                        </p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="jumbo06">
+         <div class="container jumbo-container">
+            <div class="row h-100">
+               <div class="col-sm-12 my-auto">
+                  <div class="subtitle-content">
+                     <div class="col-md-6">
+                        <div class="row">
+                           <div class="col-sm-6">
+                              <h1 class="text-slide home-padding_">Excursions et visites</h1>
+                           </div>
+                        </div>
+                        <p class="home-subtitle_">
+                           De manière ponctuelle, des excursions dans les parcs nationaux des visites de villes de cités de musées et de monuments historiques, seront organisés afin que vous puissiez découvrir les trésors nationaux.
+                        </p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="jumbo07">
+         <div class="container jumbo-container">
+            <div class="row h-100">
+               <div class="col-sm-12 my-auto">
+                  <div class="subtitle-content">
+                     <div class="col-md-8">
+                        <div class="row">
+                           <div class="col-sm-7">
+                              <h1 class="text-slide home-padding_">Ateliers culinaires et gastronomiques</h1>
+                           </div>
+                        </div>
+                        <p class="home-subtitle_">
+                           Découvrez et dégustez la cuisine des différentes contrées du pays, apprenez les recettes de confections des boissons locales et les secrets de cuisine de vos mets préférés.
+                        </p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="jumbo3">
+         <div class="container jumbo-container">
+            <div class="row h-100">
+               <div class="col-sm-12 my-auto">
+                  <div class="subtitle-content">
+                     <div class="col-md-6">
+                        <div class="row">
+                           <div class="col-sm-6">
+                              <h1 class="text-slide home-padding_">Activités sportives</h1>
+                           </div>
+                        </div>
+                        <p class="home-subtitle_">
+                           Des cours de fitness, de gym, de natation vous seront proposés ainsi que la création de clubs sportifs par filiale avec l’organisation de tournois de sports collectifs tels que le football le volleyball et la pétanque au sein du groupe.
+                        </p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="jumbo003">
+         <div class="container jumbo-container">
+            <div class="row">
+               <div class="padding-div-">
+                  <div class="col-sm-8">
+                     <h1 style="color:#fff;" class="text-slide">Formations et conférences sur le développement personnel</h1>
+                     <p style="color:#fff;">
+                        Participez à des formations sur la gestion du temps, gestion du stress, gestion des conflits, affirmation de soi, a prise de parole en public.
+                     </p>
+                     <p style="font-weight: bold;color:#fff;">NB : Le Comité de Gestion du Groupe procédera chaque année à la sélection, sur la base de critères de pertinence, d’originalité, d’impact social et de coût, de deux (02) ou trois (03) projets à financer par le Fonds.</p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+
+      <footer id="section3" class="footer">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-6">
+                  <p class="text3">Immeuble SDI</p>
+                  <p class="text3">PK7, Route de Porto Novo</p>
+                  <p class="text3">05 BP 9087 Cotonou, BENIN</p>
+               </div>
+               <div class="col-md-6">
+                 <p class="text3">Tél : +229 21 33 40 21</p>
+                 <p class="text3">Site : www.sfp-groupe.com/community</p>
+                 <p class="text3">Mail : community@sfp-groupe.com</p>
+                  <!-- <a href="cgu.html"><p class="text3">Conditions générales d’utilisation</p></a> -->
+               </div>
+            </div>
+         </div>
+      </footer>
+      <!-- Bootstrap core JavaScript
+         ================================================== -->
+      <!-- Placed at the end of the document so the pages load faster -->
+      <!-- <script src="firebase.js"></script>
+      <script src="main.js"></script> -->
+      <script src="https://code.jquery.com/jquery-3.1.0.js"  crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/js/bootstrap-datepicker.min.js">
+      <script src="//cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" crossorigin="anonymous"></script>
+      <script src="//stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" crossorigin="anonymous"></script>
+      <script src="https://www.gstatic.com/firebasejs/5.10.0/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyBrzN20y4R6u5cV7aObjeQn54s43Chn8YI",
+      authDomain: "newapp-9c8d4.firebaseapp.com",
+      databaseURL: "https://newapp-9c8d4.firebaseio.com",
+      projectId: "newapp-9c8d4",
+      storageBucket: "newapp-9c8d4.appspot.com",
+      messagingSenderId: "713500677291"
+    };
+    firebase.initializeApp(config);
+  </script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="js/script.js"></script>
+      <script>
+      $(document).ready(function() {
+  var scroll_start = 0
+  var startchange = $("#startchange")
+  var offset = startchange.offset()
+  if (startchange.length) {
+    $(document).scroll(function() {
+      scroll_start = $(this).scrollTop()
+      if (scroll_start > offset.top) {
+        $(".bg-navbar").css("background-color", "#0d47a1")
+      } else {
+        $(".bg-navbar").css("background-color", "#0d47a14f")
+      }
+    })
+  }
+})
+
+</script>
+</body>
+</html>

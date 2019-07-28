@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>firebase</title>
+    <link href="style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="//stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" crossorigin="anonymous">
+ <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.1.1/firebaseui.css" />
+ <script src="https://cdn.firebase.com/libs/firebaseui/3.1.1/firebaseui.js"></script>
+
+  </head>
+  <style>
+  .container{
+    padding-top: 130px;
+  }
+  body{
+    background:
+         /* top, transparent red, faked with gradient */ linear-gradient(
+        rgba(33, 150, 243, 0.3),
+        rgba(33, 150, 243, 0.3)
+      ),
+      /* bottom, image */ url("./img/inscription.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+  </style>
+  <body>
+   <div class="container">
+   <div class="row">
+    <div class="col-md-4 offset-md-4 padding-firebase">
+    <p class="text-firebase">S'identifier</p>
+      <form>
+        <div class="form-group">
+          <input type="email" class="form-control" id="loginEmail" placeholder="Email...">
+          <p class="error-msg" id="email-error">ne devrait pas être vide</p>
+        </div>
+        <div class="form-group">
+          <input type="password" class="form-control" id="loginPassword" placeholder="Numero de membre...">
+          <p class="error-msg" id="password-error">ne devrait pas être vide</p>
+        </div>
+        <button  id="loginButton" class="btn text-btn btn-primary">Soumettre</button>
+     </form>
+    <!-- <p style="color:#fff; font-size:30px;" class="login-title">Bienvenu a SFP</p> -->
+    <!-- <div id="firebaseui-auth-container"></div>
+    <div id="loader"><i class="fa fa-spinner fa-spin" style="font-size:48px;color:#fff"></i></div> -->
+  </div>
+</div>
+</div>
+
+<!-- <script src="js/login.js"></script> -->
+<script src="https://www.gstatic.com/firebasejs/5.10.0/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyBrzN20y4R6u5cV7aObjeQn54s43Chn8YI",
+    authDomain: "newapp-9c8d4.firebaseapp.com",
+    databaseURL: "https://newapp-9c8d4.firebaseio.com",
+    projectId: "newapp-9c8d4",
+    storageBucket: "newapp-9c8d4.appspot.com",
+    messagingSenderId: "713500677291"
+  };
+  firebase.initializeApp(config);
+</script>
+<script>
+
+firebase.auth().onAuthStateChanged(function(user) {
+  if (user) {
+    // User is signed in.
+    window.location = 'home.html'
+  } else {
+    // No user is signed in.
+    $('#loginButton').click(function(e) {
+      e.preventDefault()
+      var email = $('#loginEmail').val();
+      var password = $('#loginPassword').val();
+       check_email();
+       check_password();
+      firebase.auth().signInWithEmailAndPassword(email, password).catch(function(error) {
+        // Handle Errors here.
+        var errorCode = error.code;
+        var errorMessage = error.message;
+        // ...
+      });
+    })
+  }
+});
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+
+  $('#email-error').hide();
+  $('#password-error').hide();
+
+  var error_email = false;
+  var error_password = false;
+
+  $('#loginEmail').click(function() {
+     check_email();
+  })
+
+  $('#loginPassword').click(function() {
+    check_password();
+  })
+
+  function check_email() {
+    var  pattern = new RegExp(/^[+a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/i);
+    if(pattern.test($('#loginEmail').val())){
+        $('#password-error').hide();
+    }else {
+       $('#email-error').html('invalid email address');
+       $('#email-error').show();
+
+    }
+  }
+
+  function check_password(){
+    var password_length = $("#loginPassword").val().length;
+    if(password_length == ''){
+        $('#password-error').show();
+    }
+  }
+</script>
+</body>
+</html>
