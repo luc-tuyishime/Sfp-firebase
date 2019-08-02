@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="//stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" crossorigin="anonymous">
  <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.1.1/firebaseui.css" />
+ <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
  <script src="https://cdn.firebase.com/libs/firebaseui/3.1.1/firebaseui.js"></script>
 
   </head>
@@ -53,7 +54,20 @@
 
 <!-- <script src="js/login.js"></script> -->
 <script src="https://www.gstatic.com/firebasejs/5.10.0/firebase.js"></script>
+<script src="https://code.jquery.com/jquery-3.1.0.js"  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
 <script>
+$(document).ready(function() {
+  $("#loginButton").click(function() {
+    // disable button
+    $(this).prop("disabled", true);
+    // add spinner to button
+    $(this).html(
+      `<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> chargement...`
+    );
+  });
+});
   // Initialize Firebase
   var config = {
     apiKey: "AIzaSyBrzN20y4R6u5cV7aObjeQn54s43Chn8YI",

@@ -6,13 +6,16 @@
       <meta name="description" content="">
       <link rel="shortcut icon" href="">
       <meta name="author" content="">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
       <title>SFP</title>
       <!-- Bootstrap core CSS -->
       <link rel="stylesheet" href="//stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" crossorigin="anonymous">
       <link rel="stylesheet" href="style.css">
       <!-- <script src="https://www.gstatic.com/firebasejs/5.7.0/firebase.js"></script> -->
         <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css">
       <!-- Custom styles for this template -->
    </head>
    <body>
@@ -62,25 +65,40 @@
             <div class="row">
               <div class="col-md-8 offset-md-2">
                 <h3 class="text-center">Boîte à suggestions</h3>
-                <div class="alert">Votre message a été envoyé</div>
-                <br><br>
-            <form method="POST" action="http://formspree.io/communityfdp@sfp-groupe.com">
+
+            <form action="https://script.google.com/macros/s/AKfycbxP19k2q_R66Yz8frfgCZ5pesBoGjgOZlMUh8LzI2qMfrqC5zn6/exec"
+
+             class="gform" method="post" data-email="communityfdp@sfp-groupe.com">
+
+             <div style="display:none; text-align: center" class="thankyou_message">
+
+              <!-- You can customize the thankyou message by editing the code below -->
+              <p classs="text-sucess">Merci de nous avoir contacté! Nous reviendrons vers vous bientôt!
+              </p>
+
+             </div>
+              <br>
                 <div class="row">
                   <div class="col">
-                    <input type="text" class="form-control aaaa" placeholder="Filiale " name="filiale" required>
+                    <input type="text" class="form-control aaaa" placeholder="Filiale" name="Filiale" required>
                   </div>
                 </div>
                 <br>
                 <div class="row">
                   <div class="col">
                     <div class="form-group">
-                      <p class="text_sujection">Votre suggestion</p>
-                      <textarea class="form-control" id="textbox" name="Text suggestion" rows="3" required></textarea>
+                      <textarea class="form-control" id="textbox" placeholder="votre suggestion" name="Suggestion" rows="3" required></textarea>
                     </div>
                   </div>
                 </div>
+
+            
+
+
                <br>
-            <button type="submit" class="btn btn-primary">Envoyer</button>
+            <button type="submit" class="btn btn-primary item-button">Envoyer</button>
+
+
             </form>
            </div>
           </div>
@@ -109,10 +127,51 @@
       <script src="firebase.js"></script>
       <script src="main.js"></script>
       <script src="https://code.jquery.com/jquery-3.1.0.js"  crossorigin="anonymous"></script>
+      <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script> -->
       <script src="//cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" crossorigin="anonymous"></script>
       <script src="//stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" crossorigin="anonymous"></script>
       <script src="https://www.gstatic.com/firebasejs/5.10.0/firebase.js"></script>
   <script>
+
+//   function show_loader(){
+// 	$("#loader").addClass("loader");
+//   //event.preventDefault();
+// }
+//
+// function hide_loader(){
+// 	$("#loader").removeClass("loader");
+//   //event.preventDefault();
+// }
+//
+// if($(".item-button").length) {
+// 	$(".item-button").click(function(event) {
+// 		show_loader();
+// 	  //load the ajax data
+//     //wait(1000);
+//     setTimeout(hide_loader, 5000);
+//     //hide_loader();
+//     event.preventDefault();
+// 	});
+// }
+//   $(document).ready(function() {
+//     $(".btnFetch").click(function() {
+//       // disable button
+//       $(this).prop("disabled", true);
+//       // add spinner to button
+//       $(this).html(
+//         `<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Loading...`
+//       );
+//     });
+//
+//     $(window).on('load');
+//
+// });
+
+//   function sendMail() {
+//   window.open('mailto:luctunechi45@gmail.com');
+// javascript:sendMail();
+// }
     // Initialize Firebase
     var config = {
       apiKey: "AIzaSyBrzN20y4R6u5cV7aObjeQn54s43Chn8YI",
@@ -124,6 +183,7 @@
     };
     firebase.initializeApp(config);
   </script>
+  <script data-cfasync="false" type="text/javascript" src="form-submission-handler.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="js/script.js"></script>
       <script>
