@@ -65,37 +65,35 @@
             <div class="row">
               <div class="col-md-8 offset-md-2">
                 <h3 class="text-center">Boîte à suggestions</h3>
+                <form  class="gform" method="POST" data-email="communityfdp@sfp-groupe.com" action="https://script.google.com/macros/s/AKfycbzQeqDcpmx5a7tmu1Fq5oKOePFp3nq1YKvtRWPUzMItdeAm1Sk/exec">
+                  <div style="display:none; text-align: center" class="thankyou_message">
 
-            <form  class="gform" method="POST" data-email="communityfdp@sfp-groupe.com" action="https://script.google.com/macros/s/AKfycbzQeqDcpmx5a7tmu1Fq5oKOePFp3nq1YKvtRWPUzMItdeAm1Sk/exec">
-
-
-              <br>
-                <div class="row">
-                  <div class="col">
-                    <input type="text" class="form-control aaaa" placeholder="Filiale" name="Filiale" required>
+                   <!-- You can customize the thankyou message by editing the code below -->
+                   <p classs="text-sucess">Merci de nous avoir contacté! Nous reviendrons vers vous bientôt!
+                   </p>
                   </div>
-                </div>
-                <br>
-
-
-                <div class="row">
-                  <div class="col">
-                    <div class="form-group">
-                      <textarea class="form-control" id="textbox" placeholder="votre suggestion" name="suggestion" rows="3" required></textarea>
+                  <br>
+                    <div class="row">
+                      <div class="col">
+                        <input type="text" class="form-control aaaa" placeholder="Filiale" name="Filiale" required>
+                      </div>
                     </div>
-                  </div>
-                </div>
-
-
-               <br>
-            <button type="submit" class="btn btn-primary item-button">Envoyer</button>
-
-
-            </form>
+                    <br>
+                    <div class="row">
+                      <div class="col">
+                        <div class="form-group">
+                          <textarea class="form-control" id="textbox" placeholder="votre suggestion" name="suggestion" rows="3" required></textarea>
+                        </div>
+                      </div>
+                    </div>
+                   <br>
+                <button type="submit" class="btn btn-primary item-button">Envoyer</button>
+                </form>
            </div>
           </div>
          </div>
       </div>
+      <br><br><br>
       <footer id="section3" class="footer">
          <div class="container">
             <div class="row">
@@ -175,7 +173,7 @@
     };
     firebase.initializeApp(config);
   </script>
-  <!-- <script data-cfasync="false" type="text/javascript" src="form-submission-handler.js"></script> -->
+  <script data-cfasync="false" type="text/javascript" src="form-submission-handler.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="js/script.js"></script>
       <script>
