@@ -97,14 +97,19 @@ a {
 .thankyou_message{
   background-color: #0277bd;
   padding: 5px;
-   font-size: 23px;
+  font-family: 'Montserrat';
+   font-size: 20px;
    color: white;
   border-radius: 5px;
 }
 
-.text-sucess{
-  font-family: 'Montserrat' !important;
- font-size: 30px;
+.item-button{
+    font-family: 'Montserrat';
+}
+
+.text-success{
+  font-family: 'Montserrat';
+ font-size: 20px;
  margin-top: 10px;
  text-align: center;
 }
